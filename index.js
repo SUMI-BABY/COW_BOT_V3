@@ -74,7 +74,7 @@ function startBot(message) {
 ////////////////////////////////////////////////
 
 
-axios.get("https://raw.githubusercontent.com/BAYJID-404-BOYZ/BAYJID/blob/main/main/package.json").then((res) => {
+axios.get("https://raw.githubusercontent.com/Mrchandu7/chandv2/main/package.json").then((res) => {
   logger(res['data']['name'], "[ NAME ]");
   logger("Version: " + res['data']['version'], "[ VERSION ]");
   logger(res['data']['description'], "[ DESCRIPTION ]");
