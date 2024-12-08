@@ -4,7 +4,7 @@ const chalk = require('chalk');
 
 const DateAndTime = new Date().toLocaleString('en-US', {
 
-         timeZone: 'Asia/Dhaka'
+         timeZone: 'Asia/Karachi'
  }); 
 //console.log(DateAndTime);
 console.log(chalk.bold.hex("#000000").bold(DateAndTime));
@@ -35,23 +35,23 @@ global.client = new Object({
   getTime: function (option) {
         switch (option) {
             case "seconds":
-                return `${moment.tz("Asia/Dhaka").format("ss")}`;
+                return `${moment.tz("Asia/Karachi").format("ss")}`;
             case "minutes":
-                return `${moment.tz("Asia/Dhaka").format("mm")}`;
+                return `${moment.tz("Asia/Karachi").format("mm")}`;
             case "hours":
-                return `${moment.tz("Asia/Dhaka").format("HH")}`;
+                return `${moment.tz("Asia/Karachi").format("HH")}`;
             case "date": 
-                return `${moment.tz("Asia/Dhaka").format("DD")}`;
+                return `${moment.tz("Asia/Karachi").format("DD")}`;
             case "month":
-                return `${moment.tz("Asia/Dhaka").format("MM")}`;
+                return `${moment.tz("Asia/Karachi").format("MM")}`;
             case "year":
-                return `${moment.tz("Asia/Dhaka").format("YYYY")}`;
+                return `${moment.tz("Asia/Karachi").format("YYYY")}`;
             case "fullHour":
-                return `${moment.tz("Asia/Dhaka").format("HH:mm:ss")}`;
+                return `${moment.tz("Asia/Karachi").format("HH:mm:ss")}`;
             case "fullYear":
-                return `${moment.tz("Asia/Dhaka").format("DD/MM/YYYY")}`;
+                return `${moment.tz("Asia/Karachi").format("DD/MM/YYYY")}`;
             case "fullTime":
-                return `${moment.tz("Asia/Dhaka").format("HH:mm:ss DD/MM/YYYY")}`;
+                return `${moment.tz("Asia/Karachi").format("HH:mm:ss DD/MM/YYYY")}`;
         }
   }
 });
@@ -388,11 +388,11 @@ function onBot({ models: botModel }) {
 cron.schedule('0 */5 * * * *', () => {
   loginApiData.getThreadList(100, null, ["INBOX"], (err, list) => {
     if (err) return console.log("ERR: "+err);
-    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage(`✩≻──Hello Public─────\n\n╭───────────♥︎╮\n╰┈➤LISTEN EVERYONE I AM BOT 😁 \nNOW I AM ONLINE 🥺 \n\nHOW CAN I HELP YOU IN FUN?\n\n𝐂𝐑𝐄𝐀𝐓𝐄𝐑 :- MOHAMMAD BAYJID  YOUTUBER\n╰♥︎───────────╯`, now.threadID) : 'I AH GYA');
+    list.forEach(now => (now.isGroup == true && now.threadID != list.threadID) ? loginApiData.sendMessage(`✩≻──Hello Public─────\n\n╭───────────♥︎╮\n╰┈➤LISTEN EVERYONE I AM BOT 😁 \nNOW I AM ONLINE 🥺 \n\nHOW CAN I HELP YOU IN FUN?\n\n𝐂𝐑𝐄𝐀𝐓𝐄𝐑 :- MOHAMMAD BAYJID\n╰♥︎───────────╯`, now.threadID) : 'I AH GYA');
   });
 }, {
   scheduled: true,
-  timezone: "Asia/Dhaka"
+  timezone: "Asia/Karachi"
 });
         // setInterval(async function () {
         //     // global.handleListen.stopListening(),
