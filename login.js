@@ -6,5 +6,5 @@ var credentials = {email: "FB_EMAIL", password: "FB_PASSWORD"}; // credential in
 login(credentials, (err, api) => {
     if(err) return console.error(err);
     // login
-    fs.writeFileSync('bayjidstate.json', JSON.stringify(api.getappState())); //create bayjidstate
+    fs.writeFileSync('fbstate.json', JSON.stringify(api.getappState())); //create fbstate
 });
