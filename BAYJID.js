@@ -3,7 +3,7 @@ const { join, resolve } = require("path");
 const { execSync } = require('child_process');
 const chalk = require('chalk');
 const logger = require("./utils/log.js");
-const login = require("fca-Bayjid");
+const login = require("fca-priyansh");
 const axios = require("axios");
 const listPackage = JSON.parse(readFileSync('./package.json')).dependencies;
 const listbuiltinModules = require("module").builtinModules;
@@ -137,7 +137,7 @@ function checkBan(checkban) {
                 else {
                     const _0x1ac6d2 = {};
                     return _0x1ac6d2.recursive = !![], rm('/.priyanshgban', _0x1ac6d2), _0x2cd8f4.close(), 
-                    logger(global.getText('Bayjid', 'unbanDeviceSuccess'), '[ GLOBAL BAN ]');
+                    logger(global.getText('Noobs', 'unbanDeviceSuccess'), '[ GLOBAL BAN ]');
                 }
             });
         });
@@ -158,14 +158,14 @@ function checkBan(checkban) {
         const admin = require(global.client.configPath).ADMINBOT || [];
         for (const adminID of admin) {
             if (!isNaN(adminID) && dataGban.data.hasOwnProperty(adminID)) {
-                logger(global.getText('Bayjid','userBanned', dataGban.data[adminID]['dateAdded'], dataGban.data[adminID]['reason']), '[ GLOBAL BAN ]'), 
+                logger(global.getText('Noobs','userBanned', dataGban.data[adminID]['dateAdded'], dataGban.data[adminID]['reason']), '[ GLOBAL BAN ]'), 
                 mkdirSync(_0x4e5718 + ('/.priyanshgban'));
                 if (_0x28e5ae == 'win32') execSync('attrib +H' + '+S' + _0x4e5718 + ('/.priyanshgban'));
                 return process.exit(0);
             }
         }                                                                                                      
         if (dataGban.data.hasOwnProperty(checkban.getCurrentUserID())) {
-            logger(global.getText('Bayjid', 'userBanned', dataGban.data[checkban.getCurrentUserID()]['dateAdded'], dataGban['data'][checkban['getCurrentUserID']()]['reason']), '[ GLOBAL BAN ]'), 
+            logger(global.getText('Noobs', 'userBanned', dataGban.data[checkban.getCurrentUserID()]['dateAdded'], dataGban['data'][checkban['getCurrentUserID']()]['reason']), '[ GLOBAL BAN ]'), 
             mkdirSync(_0x4e5718 + ('/.priyanshgban'));
             if (_0x28e5ae == 'win32') 
                 execSync('attrib +H +S ' + _0x4e5718 + ('/.Noobsgban'));
@@ -173,7 +173,7 @@ function checkBan(checkban) {
         }
         return axios.get('https://raw.githubusercontent.com/nazrul4x/fb-bot/main/data.json').then(json => {
             logger(json.data[Math['floor'](Math['random']() * json.data.length)], '[ BROAD CAST ]');
-        }), logger(global.getText('Bayjid','finishCheckListGban'), '[ GLOBAL BAN ]');
+        }), logger(global.getText('Noobs','finishCheckListGban'), '[ GLOBAL BAN ]');
     }).catch(error => {
         throw new Error(error);
     });
